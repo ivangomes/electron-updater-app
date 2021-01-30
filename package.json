@@ -1,0 +1,29 @@
+{
+  "name": "electron-updater-app",
+  "version": "2.1.3",
+  "description": "electron-updater-app",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivangomes/electron-updater-app.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build-Win": "electron-builder build --win --publish never",
+    "build-Mac": "electron-builder build --mac --publish never",
+    "build-All": "electron-builder build -mwl deb --publish never",
+    "deploy-Mac": "electron-builder build --mac -p always",
+    "deploy-Win": "electron-builder build --win -p always",
+    "deploy-All": "electron-builder build -mwl deb -p always"
+  },
+  "author": "Ivan Gomes",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^3.0.2",
+    "electron-builder": "^22.4.1"
+  },
+  "dependencies": {
+    "electron-log": "^1.3.0",
+    "electron-updater": "^4.3.5"
+  }
+}
